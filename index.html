@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHero-Tube</title>
+    <title>ph-tube</title>
+    <link rel="shortcut icon" href="./images/logo-sm.png" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.4/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
+<body>
+    <header class="container mx-auto border-b-2 items-center w-[92%] flex py-5 justify-between">
+        <div class="flex items-center">
+            <img class="w-full h-[32px] sm:h-full object-contain" src="./images/logo.png" alt="logo image" />
+        </div>
+        <div id="sort-btn-container" class="tooltip tooltip-bottom" data-tip="descendingOrder">
+            <button class="btn" onclick="handleSorting()" id="sort-by">Sort by views</button>
+        </div>
+        <div class="menu menu-horizontal text-sm xl:px-1 xl:text-lg font-medium">
+            <button class="bg-[#ff1f3d] hover:bg-[#94a3b8] py-2 rounded rounded-lg">
+                <a class='text-xs sm:text-base px-2 sm:px-5' target="_blank" href='/blog.html'>BLOG</a>
+            </button>
+        </div>
+    </header>
+    <main class="container mx-auto w-[90%] my-4 md:my-6 lg:w-full text-neutral-950">
+        <section>
+            <ul id="allCategory"
+                class="menu menu-horizontal text-white  flex gap-1 sm:gap-5 justify-center items-center xl:px-1 text-sm font-medium">
+            </ul>
+        </section>
+        <section class="mt-6 md:mt-8">
+            <div id="spinner"
+                class=" my-48 w-56 mx-auto inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                role="status">
+                <span
+                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Loading...</span>
+            </div>
+            <div id="noVideos"></div>
+            <div id="allVideos"
+                class="cursor-pointer grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-5 mt-12">
+
+            </div>
+        </section>
+    </main>
+    <script src="./project.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ph-tube-blog</title>
+    <link rel="shortcut icon" href="./images/logo-sm.png" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.4/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="">
+    <div class="max-w-[1000px] select-none marker:text-[#a8a29e] text-white mx-auto pt-32">
+        <div class="collapse collapse-plus bg-[#3f3f46] mb-4">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">
+                Discuss the scope of var, let, and const!
+            </div>
+            <div class="collapse-content">
+                <p>VAR :</p>
+                <ul class="text-sm list-disc ml-4 my-4">
+                    <li>
+                        <span>Scope : </span>
+                        Variables declared with var are function-scoped. This means that their scope is limited to the
+                        function in which they are declared.
+                    </li>
+                    <li>
+                        <span>Hoisting : </span>
+                        var is hoisted to the top of its scope, which means that you can use the variable before it's
+                        declared, but it will be undefined until the declaration is encountered in the code.
+                    </li>
+                    <li>
+                        <span>Reassignment : </span> var allows for redeclaration within the same scope.
+                    </li>
+                </ul>
+                <p>LET :</p>
+                <ul class="text-sm list-disc ml-4 my-4">
+                    <li>
+                        <span>Block Scope : </span>
+                        Variables declared with let are block-scoped. This means that their scope is limited to the
+                        block (enclosed by curly braces) in which they are declared.
+                    </li>
+                    <li>
+                        <span> Hoisting : </span>
+                        let is hoisted to the top of its block, but unlike var, it is not initialized until the actual
+                        declaration is encountered.
+                    </li>
+                    <li>
+                        <span> Reassignment : </span>
+                        let does not allow for redeclaration within the same scope, but it allows for reassignment.
+                    </li>
+                </ul>
+                <p>CONST :</p>
+                <ul class="text-sm list-disc ml-4 my-4">
+                    <li>
+                        <span> Block Scope : </span>
+                        Variables declared with const are also block-scoped.
+                    </li>
+                    <li>
+                        <span> Hoisting : </span>
+                        Like let, const is hoisted to the top of its block but not initialized until the actual
+                        declaration is encountered.
+                    </li>
+                    <li>
+                        <span> Reassignment : </span>
+                        const variables must be initialized at the time of declaration, and their values cannot be
+                        reassigned.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="collapse collapse-plus bg-[#3f3f46] mb-4">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">
+                Tell us the use cases of null and undefined!
+            </div>
+            <div class="collapse-content">
+                <p>null :</p>
+                <ul class="text-sm list-disc ml-4 my-4">
+                    <li>
+                        <span>Intentional Absence of value :</span>
+                        It is a deliberate assignment to a variable or an object property to signify that it has no
+                        value or is explicitly empty.
+                    </li>
+                    <li>
+                        <span>Use cases :</span>
+                        <ul class="text-sm list-disc ml-4 my-4">
+                            <li>
+                                <span>Explicitly Absence of values :</span>
+                                null is often used to explicitly indicate that a variable or object property has no
+                                assigned value or that a function returns no meaningful result.
+                            </li>
+                            <li>
+                                <span>Resetting Variable Values :</span>
+                                Setting a variable to null can be a way to reset its value or indicate that it should
+                                not be used in its current state.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>undefined :</p>
+                <ul class="text-sm list-disc ml-4 my-4">
+                    <li>
+                        <span>Default Value for Uninitialized Variables:</span>
+                        Variables that are declared but not assigned a value are automatically initialized with
+                        undefined.
+                    </li>
+                    <li>
+                        <span>Use cases :</span>
+                        <ul class="text-sm list-disc ml-4 my-4">
+                            <li>
+                                <span>Object Properties that are not Defined:</span>
+                                Accessing an object property that is not defined results in undefined.
+                            </li>
+                            <li>
+                                <span>Function Parameters that are not Provided:</span>
+                                If a function is called with fewer arguments than the number of parameters it expects,
+                                the missing parameters are set to undefined.
+                            </li>
+                            <li>
+                                <span>Return Value of Functions with No Explicit Return:</span>
+                                If a function does not explicitly return a value, it implicitly returns undefined.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="collapse collapse-plus bg-[#3f3f46] mb-4">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">
+                What do you mean by REST API?
+            </div>
+            <div class="collapse-content">
+                <p>REST API :</p>
+                <p>A REST API (Application Programming Interface) is an implementation of the principles of REST that
+                    provides a set of rules for building web services. RESTful APIs enable communication and data
+                    exchange between different software systems over the internet. <br>Resources are identified by URIs
+                    (Uniform Resource Identifiers), and they can be manipulated using standard HTTP methods
+                    (GET, POST, PUT, DELETE). Resources represent entities such as objects, data, or services.
+                    <br>Commonly used HTTP methods and status codes are integral to the functioning of RESTful APIs.
+                </p>
+            </div>
+        </div>
+        <div class="flex mt-4 justify-center">
+            <a class='bg-[#27272a] px-3 rounded-md py-3 text-center' href='/'>
+                Back to home
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
